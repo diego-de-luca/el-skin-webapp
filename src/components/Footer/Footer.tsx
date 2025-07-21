@@ -9,8 +9,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 interface FooterLink {
   label: string;
@@ -134,7 +135,8 @@ const Footer: React.FC = () => {
                 <ul className="footer-section-links">
                   {section.links.map((link) => (
                     <li key={link.label}>
-                      <Link className="footer-link" to={link.href} key={link.label}>{link.label}</Link>
+                      {/* <a className="footer-link" href={link.href} key={link.label}>{link.label}</a> */}
+                      <Link className="footer-link" to={link.href} key={link.label}>{link.label}</Link> 
                     </li>
                   ))}
                 </ul>
